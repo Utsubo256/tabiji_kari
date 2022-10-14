@@ -24,6 +24,8 @@ module TabijiKari
 
     config.api_only = true
 
+    config.middleware.use ActionDispatch::Cookies
+
     config.generators do |g|
       g.test_framework :rspec,
         view_specs: false,
