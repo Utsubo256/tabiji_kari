@@ -28,8 +28,12 @@ Tabijiは、みんなで旅行経路/旅行計画を共有するサービスで�
 フロントエンド
 - 言語：JavaScript, TypeScript 4.8.4
 - ライブラリ：React 18.2.0
-- UI/Style：Tailwind CSS 3.1.8
+- UI/Style：Chakra UI v2, emotion
 - デザイン：Figma
+- Component Style: Functional + hooks
+- HTTPクライアント: axios
+- Data Fetching: TanStack Query (React Query) v3
+- その他主要ライブラリ: Vite, react-router-dom v6
 
 インフラ
 - クラウド：AWS (VPC/ECR/ECS(Fargate)/RDS/ALB/S3/ACM/Route53)
