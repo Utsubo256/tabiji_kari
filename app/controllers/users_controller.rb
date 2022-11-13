@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     token = cookies[:token]
 
     # 秘密鍵の取得
-    rsa_private = OpenSSL::Pkey::RSA.new(File.read(Rails.root.join('auth/service.key')))
+    rsa_private = OpenSSL::PKey::RSA.new(File.read(Rails.root.join('auth/service.key')))
 
     # JWTのデコード。JWTからペイロードが取得できない場合は認証エラーにする
     begin
