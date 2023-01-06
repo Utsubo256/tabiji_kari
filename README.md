@@ -7,7 +7,7 @@
 Tabijiは、みんなで旅行経路/旅行計画を共有するサービスです。  
 本サービスの特徴は以下です。
 
-- Googleマップを使って目的地を登録し、経路を保存できる
+- Googleマップを使って目的地を登録し、旅行経路を保存できる
 - 作った旅行計画を他の人に共有できる、他の人の旅行計画を見られる
 - 写真や文章により、旅行した場所の紹介ができる
 
@@ -24,6 +24,7 @@ Tabijiは、みんなで旅行経路/旅行計画を共有するサービスで�
 ## 技術スタック
 
 バックエンド
+
 - 言語：Ruby 3.1.2
 - フレームワーク：Ruby on Rails 7.0.4 (APIモード)
 - API形式：REST
@@ -31,8 +32,10 @@ Tabijiは、みんなで旅行経路/旅行計画を共有するサービスで�
 - 静的コード解析：RuboCop
 
 フロントエンド
-- 言語：JavaScript, TypeScript 4.8.4
+
+- 言語：JavaScript, TypeScript 4.9.4
 - ライブラリ：React 18.2.0
+- 静的コード解析、フォーマッター: ESLint, Prettier
 - UI/Style：Chakra UI v2, emotion
 - デザイン：Figma
 - Component Style: Functional + hooks
@@ -41,13 +44,15 @@ Tabijiは、みんなで旅行経路/旅行計画を共有するサービスで�
 - その他主要ライブラリ: Vite, react-router-dom v6
 
 インフラ
+
 - クラウド：AWS (VPC/ECR/ECS(Fargate)/RDS/ALB/S3/ACM/Route53)
 - OS：Ubuntu
 - Webサーバー：Nginx
 - Appサーバー：Puma
-- DBサーバー：PostgreSQL 14.4
+- DBサーバー：PostgreSQL
 
 その他
+
 - IDE：VSCode
 - リポジトリ管理：Git, GitHub
 - 仮想環境：Docker/docker-compose
@@ -60,17 +65,11 @@ Tabijiは、みんなで旅行経路/旅行計画を共有するサービスで�
 
 ## ER図
 
-(画像配置予定)
+[ERD図](./ERD.md)
 
 ## インフラ構成図
 
 (画像配置予定)
-
-## 機能とエンドポイント設計
-
-(この項目は実際には掲載しない予定)
-
-[https://docs.google.com/spreadsheets/d/1aWiQ682fXOQ-Z4QiZkH3OVIKKUZ6AFOD7n8HBFxalAQ/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1aWiQ682fXOQ-Z4QiZkH3OVIKKUZ6AFOD7n8HBFxalAQ/edit?usp=sharing)
 
 ## 外部リンク
 
