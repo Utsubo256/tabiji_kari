@@ -1,64 +1,66 @@
 ```mermaid
 erDiagram
-  Users ||--o{ PostLikes : ""
-  Users ||--o{ PostComments : ""
-  Users ||--o{ PostBookmarks : ""
-  PostLikes }o--|| Posts: ""
-  PostComments }o--|| Posts: ""
-  PostBookmarks }o--|| Posts: ""
-  Posts ||--|{ Destinations : ""
-  Destinations ||--o{ DestinationImages : ""
-  Posts ||--o{ PostTagRelations : ""
-  PostTagRelations }o--|| PostTags : ""
-  Users {
+  User ||--o{ PostLike : ""
+  User ||--o{ PostComment : ""
+  User ||--o{ PostBookmark : ""
+  User ||--o{ Post : ""
+  PostLike }o--|| Post: ""
+  PostComment }o--|| Post : ""
+  PostBookmark }o--|| Post : ""
+  Post ||--|{ Destination : ""
+  Destination ||--o{ DestinationImage : ""
+  Post ||--o{ PostTagRelation : ""
+  PostTagRelation }o--|| PostTag : ""
+  User {
     number id PK
     string name
     string email
     string introduction
     string avatar
     string password_digest
+    string refresh_jti
   }
-  PostLikes {
+  PostLike {
     number id PK
     number user_id FK
     number post_id FK
   }
-  PostComments {
+  PostComment {
     number id PK
     number user_id FK
     number post_id FK
     string post_comment
   }
-  PostBookmarks {
+  PostBookmark {
     number id PK
     number user_id FK
     number post_id FK
   }
-  Posts {
+  Post {
     number id PK
     number user_id FK
     string title
-    string published
+    string go_wanttogo
     string thumnail_url
-    string moving
+    number travel_mode
   }
-  Destinations {
+  Destination {
     number id PK
     number post_id FK
     string place
     text description
   }
-  DestinationImages {
+  DestinationImage {
     number id PK
     number destination_id FK
     string image_url
   }
-  PostTagRelations {
+  PostTagRelation {
     number id PK
     number post_id FK
     number post_tag_id FK
   }
-  PostTags {
+  PostTag {
     number id PK
     string post_tag
   }
